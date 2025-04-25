@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Python Programming Course</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-image: url("../static/images/CLBG.JPEG");
+            background-size: cover;
+            background-attachment: fixed;
+            color: #333;
+            padding: 20px;
+        }
+
+        .container {
+            background-color: rgba(255, 255, 255, 0.7); /* Light transparent background */
+            border-radius: 10px;
+            padding: 30px;
+            max-width: 1000px;
+            margin: 30px auto;
+            box-shadow: 0 0 15px rgba(0,0,0,0.2);
+        }
+
+        h1, h2 {
+            color: #007bff;
+        }
+
+        ul, ol {
+            padding-left: 20px;
+        }
+
+        .btn-download {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #28a745;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .btn-download:hover {
+            background-color: #218838;
+        }
+
+        .btn-back {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .btn-back:hover {
+            background-color: #0056b3;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Python Programming</h1>
+        <p>This course is designed for beginners to learn Python programming from scratch. You'll gain hands-on experience through real-world projects, quizzes, and interactive exercises.</p>
+
+        <h2>What You’ll Learn</h2>
+        <ul>
+            <li>Python syntax, variables, and data types</li>
+            <li>Conditional statements and loops</li>
+            <li>Functions and modules</li>
+            <li>Object-Oriented Programming (OOP)</li>
+            <li>File handling and exceptions</li>
+            <li>Working with libraries like NumPy and Pandas</li>
+            <li>Final Project: Build a complete Python application</li>
+        </ul>
+
+        <h2>Course Curriculum</h2>
+        <ol>
+            <li>Introduction to Python</li>
+            <li>Data Types and Operators</li>
+            <li>Control Flow</li>
+            <li>Functions and Recursion</li>
+            <li>OOP in Python</li>
+            <li>Error Handling</li>
+            <li>File I/O</li>
+            <li>Modules and Packages</li>
+            <li>Using NumPy and Pandas</li>
+            <li>Final Project</li>
+        </ol>
+
+        <h2>Your Instructor</h2>
+        <p><strong>Manoj H M</strong> – A passionate BCA student and Python enthusiast. With a deep understanding of programming, Manoj shares practical examples and guides you every step of the way.</p>
+
+        <h2>Prerequisites</h2>
+        <ul>
+            <li>No prior coding experience required</li>
+            <li>Basic computer knowledge</li>
+            <li>Laptop or PC with internet connection</li>
+        </ul>
+
+        <h2>Who Is This Course For?</h2>
+        <ul>
+            <li>Beginners in programming</li>
+            <li>Students and aspiring developers</li>
+            <li>Anyone interested in automation, data, or app development</li>
+        </ul>
+
+        <p>Get Free notes and start studying.</p>
+        <a href="https://cwh-full-next-space.fra1.cdn.digitaloceanspaces.com/notes/Python_Complete_Notes.pdf" class="btn-download">📥 Start Learning (PDF)</a>
+        
+        <!-- Back to Courses Button -->
+        <br>
+        <a href="{{ url_for('courses') }}" class="btn-back">⬅ GO Back</a>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 LearnOnline. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

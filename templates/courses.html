@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Online Learning Platform - Courses</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-image: url("../static/images/CLBG.jpeg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .navbar {
+            background-color: rgba(0, 123, 255, 0.9);
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            margin-left: 15px;
+            font-weight: bold;
+        }
+
+        .navbar a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .courses-list {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .course {
+            border-radius: 10px;
+            text-align: center;
+            padding: 15px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 370px;
+            box-sizing: border-box;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            color: white;
+        }
+
+        .course:nth-child(1) {
+            background-color: #4CAF50;
+        }
+
+        .course:nth-child(2) {
+            background-color: #007bff;
+        }
+
+        .course:nth-child(3) {
+            background-color: #f39c12;
+        }
+
+        .course:nth-child(4) {
+            background-color: #8e44ad;
+        }
+
+        .course img {
+            width: 90px;
+            height: 90px;
+            margin: 0 auto 10px;
+            display: block;
+            background-color: white;
+            border-radius: 50%;
+            padding: 8px;
+        }
+
+        .course h2 {
+            font-size: 1.3em;
+            margin: 10px 0;
+        }
+
+        .course p {
+            font-size: 0.95em;
+            flex-grow: 1;
+            margin-bottom: 10px;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 8px 18px;
+            background-color: #ffffff;
+            color: #000;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .btn:hover {
+            background-color: #e0e0e0;
+        }
+
+        .back-btn {
+            display: block;
+            margin: 20px auto;
+            padding: 6px 12px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 0.9em;
+            text-align: center;
+        }
+
+        .back-btn:hover {
+            background-color: #0056b3;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: rgba(233, 236, 239, 0.9);
+            color: #777;
+            margin-top: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="navbar">
+        <div class="logo">
+            <a href="/">LearnOnline</a>
+        </div>
+        <div class="nav-links">
+            <span style="color: white; font-weight: bold;">Welcome, {{ session['name'] }}</span>
+            <a href="{{ url_for('logout') }}">Logout</a>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="courses-list">
+            <div class="course">
+                <img src="../static/images/PYTHONicon.jpeg" alt="Python Icon">
+                <h2>Python Programming</h2>
+                <p>Learn Python. Build real-world projects and more.</p>
+                <a href="{{ url_for('python_course') }}" class="btn">View Course</a>
+            </div>
+            <div class="course">
+                <img src="../static/images/JAVAicon.jpeg" alt="Java Icon">
+                <h2>Java Programming</h2>
+                <p>Master Java and learn object-oriented programming.</p>
+                <a href="{{ url_for('java_course') }}" class="btn">View Course</a>
+            </div>
+            <div class="course">
+                <img src="../static/images/OSicon.jpeg" alt="OS Icon">
+                <h2>Operating Systems</h2>
+                <p>Understand how operating systems function and manage resources.</p>
+                <a href="{{ url_for('os_course') }}" class="btn">View Course</a>
+            </div>
+            <div class="course">
+                <img src="../static/images/DSicon.jpeg" alt="Data Structure Icon">
+                <h2>Data Structures</h2>
+                <p>Learn various data structures and their applications.</p>
+                <a href="{{ url_for('ds_course') }}" class="btn">View Course</a>
+            </div>
+        </div>
+
+        <a href="{{ url_for('dashboard') }}" class="back-btn">Back to Home</a>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 LearnOnline. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

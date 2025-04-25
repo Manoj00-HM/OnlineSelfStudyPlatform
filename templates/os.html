@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Operating System Course</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-image: url("../static/images/clbg.jpeg");
+            background-size: cover;
+            background-attachment: fixed;
+            color: #333;
+            padding: 20px;
+        }
+
+        .container {
+            background-color: rgba(255, 255, 255, 0.7); /* Light transparent background */
+            border-radius: 10px;
+            padding: 30px;
+            max-width: 1000px;
+            margin: 30px auto;
+            box-shadow: 0 0 15px rgba(0,0,0,0.2);
+        }
+
+        h1, h2 {
+            color: #007bff;
+        }
+
+        ul, ol {
+            padding-left: 20px;
+        }
+
+        .btn-download {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #28a745;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .btn-download:hover {
+            background-color: #218838;
+        }
+
+        .btn-back {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .btn-back:hover {
+            background-color: #0056b3;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Operating System</h1>
+        <p>This course is designed to provide a comprehensive understanding of operating systems, their functionalities, and the different components that make up an OS. You'll explore various OS concepts such as processes, memory management, and file systems.</p>
+
+        <h2>What You’ll Learn</h2>
+        <ul>
+            <li>Introduction to Operating Systems</li>
+            <li>Process Management</li>
+            <li>Memory Management</li>
+            <li>File Systems and Storage</li>
+            <li>Operating System Security</li>
+            <li>Concurrency and Synchronization</li>
+            <li>Virtualization and Cloud Computing</li>
+            <li>Final Project: Implementing basic OS components</li>
+        </ul>
+
+        <h2>Course Curriculum</h2>
+        <ol>
+            <li>Introduction to Operating Systems</li>
+            <li>Process Management</li>
+            <li>Thread and Process Synchronization</li>
+            <li>Memory Management</li>
+            <li>File Systems</li>
+            <li>Security in Operating Systems</li>
+            <li>Virtualization</li>
+            <li>Cloud Computing</li>
+            <li>System-Level Programming</li>
+            <li>Final Project</li>
+        </ol>
+
+        <h2>Your Instructor</h2>
+        <p><strong>Manoj H M</strong> – A dedicated BCA student with a strong interest in system-level programming and operating systems. Manoj will walk you through the complexities of OS concepts with clarity and practical examples.</p>
+
+        <h2>Prerequisites</h2>
+        <ul>
+            <li>Basic programming knowledge (preferably in C or Java)</li>
+            <li>Familiarity with computer architecture concepts</li>
+            <li>Laptop or PC with internet connection</li>
+        </ul>
+
+        <h2>Who Is This Course For?</h2>
+        <ul>
+            <li>Students and aspiring developers</li>
+            <li>Anyone interested in system-level programming and OS design</li>
+            <li>Beginners looking to understand how operating systems work</li>
+        </ul>
+
+        <p>Get Free notes and start studying.</p>
+        <a href="https://www.vssut.ac.in/lecture_notes/lecture1423726024.pdf" class="btn-download">📥 Start (PDF)</a>
+
+        <!-- Go Back Button -->
+        <br>
+        <a href="{{ url_for('courses') }}" class="btn-back">⬅ Go Back</a>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 LearnOnline. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

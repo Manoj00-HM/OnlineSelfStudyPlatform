@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Online Learning Platform - Dashboard</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-image: url("../static/images/clbg.jpeg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            color: #333;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .navbar {
+            background-color: rgba(0, 123, 255, 0.9);
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            margin-left: 15px;
+            font-weight: bold;
+        }
+
+        .navbar a:hover {
+            text-decoration: underline;
+        }
+
+        .main-content {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hero {
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 30px 50px;
+            border-radius: 10px;
+        }
+
+        .hero h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.2em;
+            color: #555;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 12px 24px;
+            background-color: #28a745;
+            color: white;
+            text-decoration: none;
+            font-size: 1em;
+            border-radius: 5px;
+        }
+
+        .btn:hover {
+            background-color: #218838;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: rgba(233, 236, 239, 0.9);
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="navbar">
+        <div class="logo">
+            <a href="/">LearnOnline</a>
+        </div>
+        <div class="nav-links">
+            <span style="color: white; font-weight: bold;">Welcome, {{ name }}</span>
+            <a href="{{ url_for('logout') }}">Logout</a>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <div class="hero">
+            <h1>Welcome to Online Self Learning Platform</h1>
+            <p>"Sharpen Your Mind. Explore Your Potential, Get Free Study Material and Start Self Studying. "</p>
+            <p>"Start by browsing our courses for Notes"</p>
+            <a href="{{ url_for('courses') }}" class="btn">Browse Courses</a>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 LearnOnline. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
